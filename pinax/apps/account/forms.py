@@ -21,7 +21,8 @@ from pinax.apps.account.signals import user_login_attempt, user_signed_up, user_
 from pinax.apps.account.utils import perform_login, change_password
 
 
-alnum_re = re.compile(r"^\w+$")
+alnum_re = re.compile(r"^[\w-]+|[\u4e00-\u9fa5]+$")
+
 
 
 # @@@ might want to find way to prevent settings access globally here.
